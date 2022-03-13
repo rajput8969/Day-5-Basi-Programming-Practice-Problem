@@ -6,7 +6,7 @@ namespace Day_5_Basi_Programming_Practice_Problem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Day 5");
+            Console.WriteLine("Day 5 ");
         }
     }
 }
