@@ -1,42 +1,25 @@
-﻿using System;
+sing System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Day_5_Basi_Programming_Practice_Problem
+namespace ConsoleApp1
 {
-    internal class Program
+    class PowerOf2
+    {     
+        public PowerOf2()
     {
-        public class PowerOf2
+        Console.WriteLine("enter the power for power of 2");
+        int power = (Convert.ToInt32(Console.ReadLine()));
+        Console.WriteLine("2 power of "+power+" is " + Power(power));
+    }
+    public int Power(int n)
         {
-            static void Main(string[] args)
+            int value = 1;
+            while(n>0)
             {
-                try
-                {
-                    int no;
-                    int remainder;
-                    Console.WriteLine("Enter a no to check");
-                    no = Convert.ToInt32(Console.ReadLine());
-                    if (no == 1)
-                        Console.Write("It is power of 2.");
-                    else
-                    {
-                        while (no > 1)
-                        {
-                            remainder = no % 2;
-                            if (remainder != 0)
-                                break;
-                            no /= 2;
-                        }
-                        if (no == 1)
-                            Console.WriteLine("It is a power of 2");
-                        else
-                            Console.WriteLine("It is not a power of 2");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                Console.ReadKey();
+                value *= 2; n--;
             }
+            return value;
         }
     }
 }
